@@ -72,6 +72,7 @@ button {
 
 .link-logo:hover .imagem-logo {
   opacity: 0.95;
+  scale: 1.1;
 }
 
 .links-navegacao {
@@ -84,26 +85,11 @@ button {
   font-size: 1.15rem;
   font-weight: 700;
   color: #121824;
-  position: relative;
   padding: 4px 0;
-}
-
-.link-navegacao::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #E10C7E;
 }
 
 .link-navegacao:hover {
   color: #E10C7E;
-}
-
-.link-navegacao:hover::after {
-  width: 100%;
 }
 
 /* Hero */
@@ -202,7 +188,6 @@ button {
   max-width: 480px;
   height: auto;
   border-radius: 4px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
   display: block;
 }
 
@@ -286,7 +271,6 @@ button {
   background-color: #f3f4f6;
   padding: 48px;
   border-radius: 16px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.01), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
 }
 
 .titulo-formulario {
@@ -331,59 +315,37 @@ button {
 .grupo-formulario input[type="text"]:focus,
 .grupo-formulario input[type="email"]:focus {
   border-color: #E10C7E;
-  box-shadow: 0 0 0 3px #fdf2f8;
 }
 
 /* File Input */
-.container-input-arquivo {
-  position: relative;
+.input-arquivo {
+  width: 100%;
+  font-size: 0.95rem;
+  color: #121824;
+  outline: none;
 }
 
-.container-input-arquivo input {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.container-input-arquivo div {
+.input-arquivo::file-selector-button {
   height: 48px;
   background-color: #fff;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 0 16px;
-}
-
-.container-input-arquivo input:focus+div {
-  border-color: #E10C7E;
-  box-shadow: 0 0 0 3px #fdf2f8;
-}
-
-.container-input-arquivo span {
   font-size: 0.95rem;
-  color: #a0aec0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  user-select: none;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  margin-right: 12px;
 }
 
-.container-input-arquivo .tem-arquivo {
-  color: #121824;
-}
-
-.container-input-arquivo i {
-  color: #a0aec0;
-  font-size: 20px;
-  display: block;
-}
-
-.container-input-arquivo input:hover+div i {
+.input-arquivo::file-selector-button:hover {
+  border-color: #E10C7E;
   color: #E10C7E;
+  background-color: #fdf2f8;
+}
+
+.input-arquivo:focus::file-selector-button {
+  border-color: #E10C7E;
 }
 
 .acoes-formulario {
@@ -402,7 +364,6 @@ button {
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(214, 8, 123, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -410,21 +371,16 @@ button {
 
 .botao-enviar:hover {
   background-color: #b30263;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(214, 8, 123, 0.3);
 }
 
 .botao-enviar:active {
-  transform: translateY(1px);
-  box-shadow: 0 2px 6px rgba(214, 8, 123, 0.2);
+  background-color: #920250;
 }
 
 .botao-enviar:disabled {
   background-color: #cbd5e1;
   color: #94a3b8;
   cursor: not-allowed;
-  box-shadow: none;
-  transform: none;
 }
 
 /* Rodape */
@@ -453,118 +409,6 @@ button {
 .copyright-rodape {
   font-size: 0.85rem;
   color: #64748b;
-}
-
-/* Responsivo no Mobile */
-@media (max-width: 1024px) {
-  .grid-hero {
-    gap: 40px;
-  }
-
-  .titulo-principal {
-    font-size: 2.6rem;
-  }
-
-  .titulo-secundario {
-    font-size: 1.8rem;
-  }
-
-  .grid-submissao {
-    gap: 48px;
-  }
-
-  .card-formulario-submissao {
-    padding: 36px;
-  }
-}
-
-@media (max-width: 768px) {
-  .cabecalho-site {
-    height: 72px;
-  }
-
-  .imagem-logo {
-    height: 44px;
-  }
-
-  .links-navegacao {
-    gap: 20px;
-  }
-
-  .link-navegacao {
-    font-size: 1rem;
-  }
-
-  .secao-hero {
-    padding: 48px 0;
-  }
-
-  .grid-hero {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-
-  .conteudo-texto-hero {
-    order: 1;
-  }
-
-  .container-imagem-hero {
-    order: 2;
-    justify-content: center;
-  }
-
-  .titulo-principal {
-    font-size: 2.4rem;
-  }
-
-  .titulo-secundario {
-    font-size: 1.6rem;
-  }
-
-  .descricao-hero {
-    font-size: 1rem;
-    margin-bottom: 24px;
-  }
-
-  .secao-submissao {
-    padding: 56px 0 64px;
-  }
-
-  .titulo-secao {
-    font-size: 2rem;
-    margin-bottom: 40px;
-  }
-
-  .grid-submissao {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-
-  .introducao-submissao {
-    font-size: 1.05rem;
-    margin-bottom: 32px;
-  }
-
-  .itens-info {
-    gap: 24px;
-  }
-
-  .card-formulario-submissao {
-    padding: 32px 24px;
-  }
-
-  .titulo-formulario {
-    font-size: 1.35rem;
-    margin-bottom: 28px;
-  }
-
-  .acoes-formulario {
-    justify-content: stretch;
-  }
-
-  .botao-enviar {
-    width: 100%;
-  }
 }
 
 /* é os guri do css e html */

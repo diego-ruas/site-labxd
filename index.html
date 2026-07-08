@@ -13,7 +13,7 @@
   
   
   <link rel="stylesheet" href="index.css">
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/style.css">
 </head>
 <body>
 
@@ -114,15 +114,7 @@
             
             <div class="grupo-formulario">
               <label for="arquivo-artigo">ANEXE O SEU ARTIGO</label>
-              <div class="container-input-arquivo">
-                <input type="file" id="arquivo-artigo" name="article" class="file-input-hidden" accept=".pdf,.doc,.docx" required>
-                <div class="file-input-custom" id="file-input-btn">
-                  <span class="file-input-text" id="texto-arquivo">Escolha o arquivo</span>
-                  <span class="file-input-icon">
-                    <i class="ph ph-paperclip"></i>
-                  </span>
-                </div>
-              </div>
+              <input type="file" id="arquivo-artigo" name="article" class="input-arquivo" accept=".pdf,.doc,.docx" required>
             </div>
             
             <div class="acoes-formulario">
@@ -143,20 +135,5 @@
       <p class="copyright-rodape">Todos os direitos reservados - 2026</p>
     </div>
   </footer>
-
-  
-  <script>
-    document.getElementById('arquivo-artigo').addEventListener('change', (e) => {
-      const file = e.target.files[0];
-      const textSpan = document.getElementById('texto-arquivo');
-      if (file) {
-        textSpan.textContent = file.name;
-        textSpan.classList.add('tem-arquivo');
-      } else {
-        textSpan.textContent = 'Escolha o arquivo';
-        textSpan.classList.remove('tem-arquivo');
-      }
-    });
-  </script>
 </body>
 </html>
