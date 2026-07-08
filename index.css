@@ -320,31 +320,38 @@ button {
 /* File Input */
 .input-arquivo {
   width: 100%;
-  font-size: 0.95rem;
-  color: #121824;
-  outline: none;
-}
-
-.input-arquivo::file-selector-button {
   height: 48px;
   background-color: #fff;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
+  font-size: 0.95rem;
+  color: #121824;
+  outline: none;
+  cursor: pointer;
+  line-height: 46px;
+}
+
+.input-arquivo::file-selector-button {
+  height: 100%;
+  background-color: #f8fafc;
+  border: none;
+  border-right: 1px solid #e2e8f0;
+  border-radius: 7px 0 0 7px;
   padding: 0 16px;
   font-size: 0.95rem;
   font-weight: 600;
   color: #475569;
   cursor: pointer;
-  margin-right: 12px;
+  margin-right: 16px;
+  transition: all 0.2s ease;
 }
 
 .input-arquivo::file-selector-button:hover {
-  border-color: #E10C7E;
+  background-color: #f1f5f9;
   color: #E10C7E;
-  background-color: #fdf2f8;
 }
 
-.input-arquivo:focus::file-selector-button {
+.input-arquivo:focus {
   border-color: #E10C7E;
 }
 
@@ -409,6 +416,10 @@ button {
 .copyright-rodape {
   font-size: 0.85rem;
   color: #64748b;
+}
+
+#pipe {
+  color: #E10C7E;
 }
 
 /* é os guri do css e html */
