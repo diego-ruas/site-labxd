@@ -472,20 +472,23 @@ button {
   }
 
   .container-cabecalho {
-    flex-direction: column;
-    gap: 16px;
+    gap: 12px;
+  }
+
+  .imagem-logo {
+    height: 40px;
   }
 
   .links-navegacao {
-    gap: 20px;
+    gap: 16px;
   }
 
   .link-navegacao {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .secao-hero {
-    padding: 48px 0;
+    padding: 40px 0;
   }
 
   .titulo-principal {
@@ -498,10 +501,15 @@ button {
 
   .descricao-hero {
     font-size: 1rem;
+    margin-bottom: 28px;
+  }
+
+  .container-imagem-hero {
+    order: 0;
   }
 
   .imagem-padrao-hero {
-    max-width: 280px;
+    max-width: 100%;
   }
 
   .secao-submissao {
@@ -509,7 +517,13 @@ button {
   }
 
   .titulo-secao {
+    text-align: left;
     font-size: 1.7rem;
+    margin-bottom: 32px;
+  }
+
+  .introducao-submissao {
+    margin-bottom: 32px;
   }
 
   .card-formulario-submissao {
