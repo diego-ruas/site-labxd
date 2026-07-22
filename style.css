@@ -421,4 +421,109 @@ button {
   color: #E10C7E;
 }
 
+/* Responsivo */
+@media (max-width: 900px) {
+  .container-secao,
+  .container-cabecalho {
+    padding: 0 20px;
+  }
+
+  .grid-hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .container-imagem-hero {
+    justify-content: center;
+    order: -1;
+  }
+
+  .imagem-padrao-hero {
+    max-width: 360px;
+  }
+
+  .titulo-principal {
+    font-size: 2.4rem;
+  }
+
+  .titulo-secundario {
+    font-size: 1.8rem;
+  }
+
+  .grid-submissao {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .titulo-secao {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .card-formulario-submissao {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cabecalho-site {
+    height: auto;
+    padding: 16px 0;
+  }
+
+  .container-cabecalho {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .links-navegacao {
+    gap: 20px;
+  }
+
+  .link-navegacao {
+    font-size: 1rem;
+  }
+
+  .secao-hero {
+    padding: 48px 0;
+  }
+
+  .titulo-principal {
+    font-size: 1.9rem;
+  }
+
+  .titulo-secundario {
+    font-size: 1.5rem;
+  }
+
+  .descricao-hero {
+    font-size: 1rem;
+  }
+
+  .imagem-padrao-hero {
+    max-width: 280px;
+  }
+
+  .secao-submissao {
+    padding: 48px 0 64px;
+  }
+
+  .titulo-secao {
+    font-size: 1.7rem;
+  }
+
+  .card-formulario-submissao {
+    padding: 24px;
+    border-radius: 12px;
+  }
+
+  .item-info {
+    gap: 14px;
+  }
+
+  .rodape-site {
+    padding: 32px 20px;
+  }
+}
+
 /* é os guri do css e html */
